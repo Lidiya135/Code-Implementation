@@ -12,12 +12,12 @@
 
 pijarFood = (harga, voucher, jarak, pajak) => {
     if (voucher == "PIJARFOOD5") {
-        if (harga >= 50000){                                        // Validasi harga item minimal 50.000 untuk PIJARFOOD5
+        if (harga >= 50000){                                        // Validasi harga minimal 50.000 untuk PIJARFOOD5
             potHarga = 0.5 * harga;
             if (potHarga > 50000) {                              // Membatasi maksimal diskon jika melebihi dari 50.000
             potHarga = 50000
             }
-        } else {                                                       // Jika tidak memenuhi minimal harga item maka potongan harga 0
+        } else {                                                       // Jika tidak memenuhi minimal harga maka potongan harga 0
             potHarga = 0
         }
     } else if (voucher == "DITRAKTIRPIJAR") {
@@ -27,7 +27,7 @@ pijarFood = (harga, voucher, jarak, pajak) => {
             potHarga = 30000
             }
         } else {
-            potHarga = 0                                          // Jika tidak memenuhi minimal harga item maka potongan harga 0
+            potHarga = 0                                          // Jika tidak memenuhi minimal harga maka potongan harga 0
         }
     } else {
         potHarga = 0
